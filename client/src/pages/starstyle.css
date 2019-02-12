@@ -1,0 +1,37 @@
+.starNum{
+    color: #a5a5a5;
+    margin: 0 5px 0 0;
+  }
+  .power{
+    height: 10px;
+    display: inline-block;
+    background-color: #fed69a;
+    margin: 0 10px 0 0;
+  }
+  
+  .rateWrapper{
+    border-left: 1px solid #eaeaea;
+    padding: 0 0 0 20px;
+  }
+  .rateTitle{
+    color: #a5a5a5;
+  }
+  
+  .starWrapper {
+    display: flex;
+  }
+
+  .average{
+    font-size: 24px;
+    font-weight: bolder;
+    color: #494949;
+    margin: 0 10px 0 0;
+  }
+
+  .noRate {
+    color: #999;
+  }
+
+  .rateNum{
+    white-space: nowrap;
+  }
