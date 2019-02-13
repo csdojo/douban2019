@@ -26,7 +26,7 @@ app.get("*", function(req,res) {
 });
 
 // turn on mongo connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {useNewUrlParser: true});
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {useNewUrlParser: true});
 
 // turn on server
 app.listen(PORT, () => console.log(`🗺️ ==> Server now on ${PORT}`))
