@@ -10,13 +10,13 @@ This a web application re-edition of [Douban.com](https://movie.douban.com/)
 * User Savedpage 
 
 # Used
-react
-react-responsive
-react-router
-react-slick
-mongoose
-bootstrap
-css
+* react
+* react-responsive
+* react-router
+* react-slick
+* mongoose
+* bootstrap
+* css
 
 # API
 [APIs](https://github.com/jokermonn/-Api/blob/master/DoubanMovie.md)
