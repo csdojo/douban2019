@@ -13,6 +13,7 @@ class Rank extends Component {
             weeklyBest: [],
             weeklyB: [],
             usBox: [],
+            newMovies: [],
             topHundred: [],
             settings: {
                 dots: true
@@ -23,7 +24,31 @@ class Rank extends Component {
     componentDidMount() {
         this.weeklyBest();
         this.usBox();
-        this.topHundred()
+        this.topHundred();
+        this.newMovies()
+    }
+
+    newMovies = () => {
+
+        fetch("https://cors-anywhere.herokuapp.com/https://api.douban.com/v2/movie/new_movies?apikey=0b2bdeda43b5688921839c8ecb20399b")
+            .then(result => {
+                return result.json();
+            })
+            .then(data => {
+                console.log(data["subjects"])
+                const newMovies = data["subjects"].map(movie => {
+
+                    return {
+                        newMovieimg: "https://images.weserv.nl/?url=" + movie.images.small,
+                        newTitle: movie.title,
+                        newPro: movie.pubdates,
+                        newScore: movie.rating.average,
+                        newCollectCount: movie.collect_count
+                    }
+                });
+
+                this.setState({ newMovies });
+            })
     }
 
     weeklyBest = () => {
@@ -90,12 +115,39 @@ class Rank extends Component {
                     <div className="row">
                         <div className="col-9">
                             <div className="row">
-                                <div className="container">
-                                    <h6 className="intheaterHeader">
-                                        正在热映
-                                    <a href="/" className="intheader">全部正在热映»</a>
-                                        <a href="/" className="intheader">即将上映»</a>
-                                    </h6>
+                                <div className="container rankCont">
+                                    <p className="movieranktitle">
+                                        豆瓣电影排行榜
+                                    </p>
+                                    <div>
+                                        <h2 className="newPic">豆瓣新片榜 · · · · · ·</h2>
+                                    </div>
+                                    {!this.state.newMovies.length ?
+                                        (<img src={Loading} alt='loading' />)
+                                        :
+                                        this.state.newMovies.map(movie => {
+                                            return (
+                                                <div className="row weeklyListRank">
+                                                    <div className="col-3 newMovieP">
+                                                        <img className="newMovieImg" src={movie.newMovieimg} alt="card" referrerpolicy="never" rounded />
+                                                    </div>
+                                                    <div className="col-9">
+                                                        <div className="row">
+                                                            {movie.newTitle}
+                                                        </div>
+                                                        <div className="row">
+                                                            {movie.newPro}
+                                                        </div>
+                                                        <div className="row">
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            )
+                                        }
+                                        )
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -141,26 +193,26 @@ class Rank extends Component {
                             <div className="row">
 
                                 <div className="weeklyBoxRank">
-                                <h6 className="topHeader">
-                                    豆瓣电影TOP250
+                                    <h6 className="topHeader">
+                                        豆瓣电影TOP250
                                 </h6>
                                 </div>
 
-                                <div className = "row">
-                                {!this.state.topHundred.length ?
-                                    (<img src={Loading} alt='loading' />)
-                                    :
-                                    this.state.topHundred.map(movie => {
-                                        return (
-                                            <div className="card mycard">
-                                                <img  className="card-img-top myimg" src={movie.topHundredImg} alt="card" referrerpolicy="never" rounded />
-                                                <div className="card-body mycardbody">
-                                                    <span className="card-text">{movie.topHundredTitle}</span>
+                                <div className="row">
+                                    {!this.state.topHundred.length ?
+                                        (<img src={Loading} alt='loading' />)
+                                        :
+                                        this.state.topHundred.map(movie => {
+                                            return (
+                                                <div className="card mycard">
+                                                    <img className="card-img-top myimg" src={movie.topHundredImg} alt="card" referrerpolicy="never" rounded />
+                                                    <div className="card-body mycardbody">
+                                                        <span className="card-text">{movie.topHundredTitle}</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        )
-                                    }
-                                    )}
+                                            )
+                                        }
+                                        )}
                                 </div>
                             </div>
 

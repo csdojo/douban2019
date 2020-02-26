@@ -161,7 +161,7 @@ class Home extends Component {
                     <div className="row">
                         <div className="col-9">
                             <div className="row">
-                                <div className="container">
+                                <div className="container rankCont">
                                     <h6 className="intheaterHeader">
                                         正在热映
                                     <a href="/" className="intheader">全部正在热映»</a>

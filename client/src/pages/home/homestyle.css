@@ -33,7 +33,7 @@
     font-size:15px;
     width: 132px;
     box-shadow: 0 0px 0px rgba(0,0,0,0.15);
-  transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .card:hover{
@@ -66,8 +66,16 @@ img{
     height:300px;
 }
 
-.intheaterHeader,
+.intheaterHeader{
+    padding-top:18px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
 .weeklyHeader{
+    margin: 10px 0;
+    color: #087626;
     padding-top:18px;
     padding-bottom: 10px;
     margin-bottom: 15px;
@@ -211,4 +219,6 @@ margin-bottom: 30px
 }
 
 
-
+.rankCont{
+    padding-left: 0px;
+}

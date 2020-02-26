@@ -1,3 +1,6 @@
+*{
+    font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
 
 .gret{
     padding-top: 0px;
@@ -32,12 +35,12 @@
 .footerContainer{
     margin-top:50px;
     border-top: 1px dashed #e0e0e0;
-text-align: center;
-font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
-font-size: 12px;
-line-height: 1.5;
-color: rgba(0,0,0,.65);
-margin-bottom: 30px
+    text-align: center;
+    font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0,0,0,.65);
+    margin-bottom: 30px
 }
 
 .salute{
@@ -57,9 +60,9 @@ margin-bottom: 30px
 .topHeader{
     margin: 10px 0;
     color: #087626;
-        padding-top:18px;
-        padding-bottom: 10px;
-        margin-bottom: 15px;
+    padding-top:18px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .mycardbody{
@@ -72,4 +75,42 @@ margin-bottom: 30px
 .weeklyBoxRank{
     margin-left: 0;
     width: 100%;
+}
+
+
+.movieranktitle{
+    font-size: 24px;
+    color: #494949;
+    font-weight: bolder;
+    margin: 20px 0 0 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding: 0;
+    text-align: left;
+}
+
+.newPic{
+    display: block;
+    margin: 8px 0;
+    color: #087626;
+    font-size: 1.1em;
+
+}
+
+.weeklyListRank{
+    padding: 8px 0 8px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed #ddd;
+    
+}
+
+.newMovieImg{
+    height:151px;
+    width: 100px;
+}
+
+.newMovieP{
+    max-width: 17%;
 }
