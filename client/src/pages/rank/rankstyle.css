@@ -1,0 +1,75 @@
+
+.gret{
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+.myimg{
+    height:101px;
+    width: 100%;
+}
+
+
+
+.mycard{
+    text-align: center;
+    font-size:10px;
+    width: 25%;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+    padding-bottom: 5px;
+    padding-right:4px;
+    border: 0px solid rgba(0,0,0,.125);
+}
+.pad{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+.footerContainer{
+    margin-top:50px;
+    border-top: 1px dashed #e0e0e0;
+text-align: center;
+font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+font-size: 12px;
+line-height: 1.5;
+color: rgba(0,0,0,.65);
+margin-bottom: 30px
+}
+
+.salute{
+    
+    float:right
+}
+.doubanCom{
+    float:left
+}
+
+.dojoA{
+    color: rgba(0,0,0,.65);
+    margin-left:7px
+}
+
+
+.topHeader{
+    margin: 10px 0;
+    color: #087626;
+        padding-top:18px;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+}
+
+.mycardbody{
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.weeklyBoxRank{
+    margin-left: 0;
+    width: 100%;
+}

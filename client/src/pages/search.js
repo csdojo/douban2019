@@ -7,7 +7,7 @@ class Search extends Component {
     render() {
         return (
             <div>
-dddddddddddddddddddddddddjfjf
+
             </div>
 
         )
