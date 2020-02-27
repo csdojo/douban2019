@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Slider from 'react-slick';
-import { Icon, Col, Row } from 'antd';
-import Loading from '../../assets/loading.svg';
 import { Rate } from 'antd';
-import { Button } from 'antd';
+import "antd/dist/antd.css";
+import Loading from '../../assets/loading.svg';
 import './rankstyle.css';
 
 class Rank extends Component {
@@ -43,7 +42,8 @@ class Rank extends Component {
                         newTitle: movie.title,
                         newPro: movie.pubdates,
                         newScore: movie.rating.average,
-                        newCollectCount: movie.collect_count
+                        newCollectCount: movie.collect_count,
+                        newCast: movie.casts
                     }
                 });
 
@@ -88,6 +88,15 @@ class Rank extends Component {
             })
     }
 
+    createCast = (e) => {
+        let cast = []
+
+        for (let i = 0; i < e.length; i++) {
+            cast.push(e[i].name)
+        }
+
+        return cast
+    }
 
     topHundred = () => {
 
@@ -129,17 +138,19 @@ class Rank extends Component {
                                             return (
                                                 <div className="row weeklyListRank">
                                                     <div className="col-3 newMovieP">
-                                                        <img className="newMovieImg" src={movie.newMovieimg} alt="card" referrerpolicy="never" rounded />
+                                                        <img className="newMovieImg" src={movie.newMovieimg} alt="card" referrerPolicy="never" />
                                                     </div>
-                                                    <div className="col-9">
-                                                        <div className="row">
+                                                    <div className="col-9 detailNew">
+                                                        <div className="row newTitle">
                                                             {movie.newTitle}
                                                         </div>
                                                         <div className="row">
-                                                            {movie.newPro}
+                                                            {movie.newPro} {this.createCast(movie.newCast)}
                                                         </div>
                                                         <div className="row">
-
+                                                            <Rate allowHalf disabled defaultValue={0} value={Math.round(movie.newScore) / 2} count={5} />
+                                                            {movie.newScore}
+                                                            ({movie.newCollectCount}人评价)
                                                         </div>
 
                                                     </div>
@@ -205,7 +216,7 @@ class Rank extends Component {
                                         this.state.topHundred.map(movie => {
                                             return (
                                                 <div className="card mycard">
-                                                    <img className="card-img-top myimg" src={movie.topHundredImg} alt="card" referrerpolicy="never" rounded />
+                                                    <img className="card-img-top myimg" src={movie.topHundredImg} alt="card" referrerPolicy="never" rounded />
                                                     <div className="card-body mycardbody">
                                                         <span className="card-text">{movie.topHundredTitle}</span>
                                                     </div>
@@ -215,21 +226,10 @@ class Rank extends Component {
                                         )}
                                 </div>
                             </div>
-
                         </div>
-                    </div>
-
-                </div>
-                <div className="container footerContainer">
-                    <div className="footer">
-                        <span className="doubanCom">© 2005－2019 douban.com, all rights reserved 北京豆网科技有限公司</span>
-                        <span className="salute" role="img" aria-label="">💌 Salute to Douban.com / 2018-2019 Made by
-                <a className="dojoA" href="https://github.com/csdojo" target="_blank" rel="noopener noreferrer">DOJO9</a>
-                        </span>
                     </div>
                 </div>
             </div>
-
         )
     }
 }

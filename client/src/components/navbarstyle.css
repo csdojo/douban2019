@@ -10,7 +10,6 @@
 .topnav{
     background-color: #545652;
     padding: 5px 0;
-  
 }
 
 .toptag{
@@ -18,27 +17,25 @@
     text-decoration: none;
     margin: 0 10px;
     font-size:13px
-    
 }
 .topnav a:hover{
-    text-decoration: none; 
+    text-decoration: none;
     color:#d1d1d1
 }
 
 .largeFontLogo{
     font-size: 30px;
-  font-weight: bold;
-  color: #2a8ccb;
-  margin: 0 20px;
-  
-    
+    font-weight: bold;
+    color: #2a8ccb;
+    margin: 0 20px;
+
 }
 
 .movieoftheyear{
     color:#426da8;
     font-size: 30px;
-  font-weight: bold;
-  float:right;
+    font-weight: bold;
+    float:right;
 }
 .movieoftheyear:hover{
     text-decoration: none;
@@ -46,7 +43,7 @@
 }
 
 .navbar-brand a:hover{
-    text-decoration: none; 
+    text-decoration: none;
     color:#2a8ccb
 }
 .largelogorow{
@@ -65,7 +62,6 @@
     background: #f0f3f5;
     text-decoration: none;
     border-top: 1px solid rgb(216, 216, 216)
-    
 }
 
 .littleThree :hover{

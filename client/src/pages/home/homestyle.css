@@ -14,7 +14,7 @@
 
 .slick-arrow:hover{
     background-color:rgb(189, 189, 189)
-} 
+}
 
 .infoname{
     text-align: center
@@ -26,7 +26,7 @@
 
 .movieCardStar{
     font-size: 12px;
-  margin-right: 2px;
+    margin-right: 2px;
 }
 
 .card{
@@ -44,13 +44,9 @@
     font-size:15px
 }
 .nowrapTitle{
-
-    white-space: nowrap;  
-   
-    text-overflow:ellipsis; 
-   
+    white-space: nowrap;
+    text-overflow:ellipsis;
     overflow:hidden;
-   
    }
 p{
     margin-bottom: 0;
@@ -182,7 +178,6 @@ h6{
     padding: 5px 0;
     font-size: 14px;
     border-bottom: 1px dashed #ddd;
-    
 }
 
 .weeklyTitle{
@@ -193,31 +188,6 @@ h6{
 .weeklyList a:hover{
     text-decoration: none
 }
-
-.footerContainer{
-    margin-top:50px;
-    border-top: 1px dashed #e0e0e0;
-text-align: center;
-font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
-font-size: 12px;
-line-height: 1.5;
-color: rgba(0,0,0,.65);
-margin-bottom: 30px
-}
-
-.salute{
-    
-    float:right
-}
-.doubanCom{
-    float:left
-}
-
-.dojoA{
-    color: rgba(0,0,0,.65);
-    margin-left:7px
-}
-
 
 .rankCont{
     padding-left: 0px;

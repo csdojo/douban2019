@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.13.2",
+    "antd": "^3.26.12",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-loading": "^2.0.3",
@@ -12,13 +12,17 @@
     "react-slick": "^0.25.2",
     "react-star-rating-component": "^1.4.1",
     "slick-carousel": "^1.8.1",
+    "superagent": "^5.2.2",
     "url-loader": "^3.0.0"
   },
+  "proxy":"http://localhost:8081",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "node-env-run server --exec nodemon",
+    "dev": "run-p server start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,5 +32,14 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-pino-logger": "^4.0.0",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^1.5.1"
+  }
 }

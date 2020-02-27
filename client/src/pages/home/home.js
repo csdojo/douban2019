@@ -43,7 +43,7 @@ class Home extends Component {
             inbox: [],
             weeklyB: [],
             images: [],
-            comingSoon:[],
+            comingSoon: [],
             settings: {
                 dots: true,
                 slidesToShow: 5,
@@ -169,7 +169,7 @@ class Home extends Component {
                                     </h6>
                                     <Slider {...this.state.settings}>
                                         {!this.state.inbox.length ?
-                                            (<img src={Loading} alt='loading'/>)
+                                            (<img src={Loading} alt='loading' />)
                                             :
                                             this.state.inbox.map(movie => {
                                                 return (
@@ -178,7 +178,7 @@ class Home extends Component {
 
                                                             <div className="card border-light">
 
-                                                                <img className="movieImage" src={movie.images} alt={movie.title} referrerpolicy="never" />
+                                                                <img className="movieImage" src={movie.images} alt={movie.title} referrerPolicy="never" />
                                                                 <div >
                                                                     <p className="nowrapTitle">{movie.title}</p>
 
@@ -206,13 +206,13 @@ class Home extends Component {
                                 </div>
                             </div>
                             <div className="row">
-                            <div className="container">
+                                <div className="container">
                                     <h6 className="intheaterHeader">
-                                    即将上映
+                                        即将上映
                                     </h6>
                                     <Slider {...this.state.settings}>
                                         {!this.state.comingSoon.length ?
-                                            (<img src={Loading} alt='loading'/>):
+                                            (<img src={Loading} alt='loading' />) :
                                             this.state.comingSoon.map(movie => {
                                                 return (
                                                     <div className="col-12" key={movie.id}>
@@ -220,7 +220,7 @@ class Home extends Component {
 
                                                             <div className="card border-light">
 
-                                                                <img className="movieImage" src={movie.images} alt={movie.title} referrerpolicy="never"/>
+                                                                <img className="movieImage" src={movie.images} alt={movie.title} referrerPolicy="never" />
                                                                 <div >
                                                                     <p className="nowrapTitle">{movie.title}</p>
 
@@ -252,31 +252,22 @@ class Home extends Component {
                                     本周口碑榜
                                 </h6>
                                 {!this.state.weeklyB.length ?
-                                            (<img src={Loading} alt='loading'/>)
-                                            :
-                                            this.state.weeklyB.map(movie => {
-                                                return (
-                                                    <div className="weeklyList">
-                                                        <span>{movie.rank}</span>
-                                                        <a href="/"><span className="weeklyTitle">{movie.weeklyTitle}</span> </a>
-                                                    </div>
-                                                )}
-                                                )}
+                                    (<img src={Loading} alt='loading' />)
+                                    :
+                                    this.state.weeklyB.map(movie => {
+                                        return (
+                                            <div className="weeklyList">
+                                                <span>{movie.rank}</span>
+                                                <a href="/"><span className="weeklyTitle">{movie.weeklyTitle}</span> </a>
+                                            </div>
+                                        )
+                                    }
+                                    )}
                             </div>
                         </div>
                     </div>
-
-                </div>
-                <div className="container footerContainer">
-                <div className="footer">
-                <span className="doubanCom">© 2005－2019 douban.com, all rights reserved 北京豆网科技有限公司</span>
-                <span className="salute" role = "img" aria-label="">💌 Salute to Douban.com / 2018-2019 Made by 
-                <a className="dojoA" href="https://github.com/csdojo" target="_blank" rel="noopener noreferrer">DOJO9</a>
-                </span>
-                </div>
                 </div>
             </div>
-
         )
     }
 }

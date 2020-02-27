@@ -1,0 +1,23 @@
+.doubanCom{
+    float:left
+}
+
+.salute{
+    float:right
+}
+
+
+.dojoA{
+    color: rgba(0,0,0,.65);
+    margin-left:7px
+}
+.footerContainer{
+    margin-top:50px;
+    border-top: 1px dashed #e0e0e0;
+    text-align: center;
+    font-family: Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0,0,0,.65);
+    margin-bottom: 30px
+}
