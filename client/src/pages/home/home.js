@@ -44,15 +44,20 @@ class Home extends Component {
             weeklyB: [],
             images: [],
             comingSoon: [],
+            comingSoonLen: 0,
             settings: {
                 dots: true,
                 slidesToShow: 5,
                 slidesToScroll: 5,
                 nextArrow: <SampleNextArrow />,
                 prevArrow: <SamplePrevArrow />
-
-                // centerPadding: '10px'
-
+            },
+            settingsComingSoon: {
+                dots: true,
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                nextArrow: <SampleNextArrow />,
+                prevArrow: <SamplePrevArrow />
             }
         }
     }
@@ -139,7 +144,7 @@ class Home extends Component {
                 return result.json();
             })
             .then(data => {
-
+                const comingSoonLen = data["subjects"].length
                 const comingSoon = data["subjects"].map(movie => {
                     return {
                         title: movie.title,
@@ -149,6 +154,17 @@ class Home extends Component {
                 });
 
                 this.setState({ comingSoon });
+                this.setState({ comingSoonLen });
+                this.setState({
+                    settingsComingSoon: {
+                        dots: true,
+                        slidesToShow: comingSoonLen,
+                        slidesToScroll: 5,
+                        nextArrow: <SampleNextArrow />,
+                        prevArrow: <SamplePrevArrow />
+                    }
+                })
+
             })
 
     }
@@ -210,7 +226,7 @@ class Home extends Component {
                                     <h6 className="intheaterHeader">
                                         即将上映
                                     </h6>
-                                    <Slider {...this.state.settings}>
+                                    <Slider {...this.state.settingsComingSoon}>
                                         {!this.state.comingSoon.length ?
                                             (<img src={Loading} alt='loading' />) :
                                             this.state.comingSoon.map(movie => {
@@ -224,8 +240,7 @@ class Home extends Component {
                                                                 <div >
                                                                     <p className="nowrapTitle">{movie.title}</p>
 
-                                                                    <p>{movie.rating}</p>
-                                                                    <p></p>
+
                                                                     {/* <div className="btn-group" role="group">
                                                                         <button type="button" className="btn" onClick={() => this.saveMovie(movie.id)}>Save Movie</button>
 
